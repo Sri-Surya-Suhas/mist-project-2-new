@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIST Form</title>
+    <!-- Flatpickr CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="script" href="script.js">
+</head>
+<body>
+    <div class="top-header">
+        <div class="logo">
+            <img src="https://mistralaichatupprodswe.blob.core.windows.net/chat-images/d5/b5/69/d5b569d5-2884-4d0b-8a25-4bafc81ca968/2e7d6f44-ea1f-404f-8312-16d78129cf95/06b96a50-6659-4130-8f38-2aeaac385c89?sv=2025-01-05&st=2025-10-16T16%3A53%3A11Z&se=2025-10-16T17%3A53%3A11Z&sr=b&sp=rade&sig=1ONmECJg5US6cj1tHtTJQJm9prvO8SEa%2FEgDdpBj38s%3D" alt="MIST Logo">
+        </div>
+        <div class="header-text">
+            Name, Reg Number, Contact Number of person submitting
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="left-panel">
+            <form id="mistForm">
+                <div class="form-group">
+                    <div class="label-container">
+                        <label for="name">Enter Name</label>
+                        <p>(Should be letters only)</p>
+                    </div>
+                    <input type="text" id="name" placeholder="Enter Name" required>
+                </div>
+                <br><br><br>
+                <div class="form-group">
+                    <div class="label-container">
+                        <label for="regNumber">Enter Reg Number</label>
+                        <p>(Should be 9 numbers only)</p>
+                    </div>
+                    <input type="text" id="regNumber" placeholder="Enter Reg Number" pattern="\d{9}" title="Registration number must be exactly 9 digits" required>
+                </div>
+                <br><br><br>
+                <div class="form-group">
+                    <div class="label-container">
+                        <label for="birthday">Enter birthday</label>
+                        <p>(Use calendar form validation here)</p>
+                    </div>
+                    <input type="text" id="birthday" placeholder="Select Date" required>
+                </div>
+            </form>
+        </div>
+        <div class="right-panel">
+            <div class="right-panel-content">
+                <h3>MIST Mancomm Member 69</h3>
+                <p>My name is <span id="displayName"></span></p>
+                <p>My registration number is <span id="displayRegNumber"></span></p>
+                <p>My birthday is on <span id="displayBirthday"></span></p>
+                <div class="form-group" style="flex-direction: column; align-items: center;">
+                    <label>Is webdev the best domain? :)</label>
+                    <div class="toggle-buttons">
+                        <button type="button" id="yes-btn" class="toggle-btn">YES</button>
+                        <button type="button" id="no-btn" class="toggle-btn">NO</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Flatpickr JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="script.js"></script>
+</body>
+</html>
